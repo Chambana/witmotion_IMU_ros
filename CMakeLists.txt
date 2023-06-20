@@ -22,7 +22,7 @@ add_subdirectory(witmotion-uart-qt)
 #set(CMAKE_AUTOMOC ON)
 #qt5_wrap_cpp(MOC_SOURCES include/witmotion_ros.h)
 include_directories(include)
-include_directories(/opt/ros/humble/include/tf2_geometry_msgs)
+include_directories(/opt/ros/foxy/include/tf2_geometry_msgs)
 include_directories(witmotion-uart-qt/include)
 #add_library(witmotion_ros src/witmotion_ros.cpp include/witmotion_ros.h)
 
@@ -95,7 +95,7 @@ ament_export_dependencies(Qt5SerialPort)
 ament_export_targets(export_witmotion_ros HAS_LIBRARY_TARGET)
 ament_export_targets(export_witmotion-uart HAS_LIBRARY_TARGET)
 ament_export_include_directories(${INCLUDE_DIRS})
-ament_export_libraries(witmotion_ros witmotion-uart ${LIBS})
+#ament_export_libraries(witmotion_ros witmotion-uart ${LIBS})
 
 
 install(
